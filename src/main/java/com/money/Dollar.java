@@ -1,3 +1,6 @@
+package com.money;
+
+
 public class Dollar {
     private int amount;
 
@@ -9,7 +12,9 @@ public class Dollar {
         return new Dollar(amount * multiplier);
     }
 
-    public int getAmount() {
-        return amount;
+    @Override
+    public boolean equals(Object object) {
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
     }
 }
